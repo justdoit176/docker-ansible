@@ -7,7 +7,7 @@
 
 
 # pull base image
-FROM alpine:latest
+FROM alpine:3.10
 
 RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     apk --update add sudo                                         && \
