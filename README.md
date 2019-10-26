@@ -10,4 +10,4 @@ Versions:
 Usage:
 `docker pull armox76/ansible`
 
-[Docker Image](https://hub.docker.com/r/armox76/ansible/)
+[Docker Hub](https://hub.docker.com/r/armox76/ansible/)
