@@ -11,5 +11,5 @@ before_install:
 script:
     - docker run -i ansible > result-alpine3
 
-    - echo "==> Validating the test results..."
+    - echo "Validating the test results..."
     - sh -c "[ -s result-alpine3             ]"
