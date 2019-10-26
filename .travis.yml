@@ -6,10 +6,10 @@ before_install:
     - docker info
     - docker version
 
-    - docker build  -t ansible          alpine3
+    - docker build  -t ansible alpine3
 
 script:
-    - docker run -i ansible          > result-alpine3
+    - docker run -i ansible > result-alpine3
 
     - echo "==> Validating the test results..."
     - sh -c "[ -s result-alpine3             ]"
