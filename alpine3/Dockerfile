@@ -7,20 +7,17 @@
 
 
 # pull base image
-FROM alpine:3.8
-
-MAINTAINER William Yeh <william.pjyeh@gmail.com>
-
+FROM alpine:latest
 
 RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     apk --update add sudo                                         && \
     \
     \
     echo "===> Adding Python runtime..."  && \
-    apk --update add python py-pip openssl ca-certificates    && \
+    apk --update add python3 py3-pip openssl ca-certificates    && \
     apk --update add --virtual build-dependencies \
-                python-dev libffi-dev openssl-dev build-base  && \
-    pip install --upgrade pip cffi                            && \
+                python3-dev libffi-dev openssl-dev build-base   && \
+    pip3 install --upgrade pip                                  && \
     \
     \
     echo "===> Installing Ansible..."  && \
