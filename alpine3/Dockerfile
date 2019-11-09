@@ -6,7 +6,7 @@
 FROM alpine:3.10
 
 RUN echo -e "\nInstalling sudo to emulate normal OS behavior...\n"  && \
-    apk --update add sudo                                         && \
+    apk --update add sudo                                           && \
     \
     \
     echo -e "\nAdding Python runtime...\n"  && \
@@ -16,8 +16,8 @@ RUN echo -e "\nInstalling sudo to emulate normal OS behavior...\n"  && \
     pip3 install --upgrade pip                                  && \
     \
     \
-    echo -e "\nInstalling Ansible...\n"  && \
-    pip install ansible                && \
+    echo -e "\nInstalling Ansible...\n"        && \
+    pip install ansible jmespath               && \
     \
     \
     echo -e "\nInstalling handy tools (not absolutely required)...\n"  && \
@@ -26,12 +26,12 @@ RUN echo -e "\nInstalling sudo to emulate normal OS behavior...\n"  && \
     \
     \
     echo -e "\nRemoving package list...\n"  && \
-    apk del build-dependencies            && \
-    rm -rf /var/cache/apk/*               && \
+    apk del build-dependencies              && \
+    rm -rf /var/cache/apk/*                 && \
     \
     \
     echo -e "\nAdding hosts for convenience...\n"  && \
-    mkdir -p /etc/ansible                        && \
+    mkdir -p /etc/ansible                          && \
     echo 'localhost' > /etc/ansible/hosts
 
 # default command: display Ansible version
