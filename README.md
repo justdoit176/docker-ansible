@@ -3,9 +3,9 @@
 Docker image for Ansible software, based on Alpine.
 
 Versions:
-- Alpine 3.10
-- Python 3.7
-- Ansible 2.8.6
+- Alpine 3.12
+- Python 3.8.5
+- Ansible 2.10.4
 
 Usage:
 `docker pull armox76/ansible`
