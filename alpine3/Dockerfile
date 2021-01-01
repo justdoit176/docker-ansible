@@ -1,7 +1,4 @@
 # Dockerfile for building Ansible image for Alpine 3, with as few additional software as possible.
-#
-# Version  2.0
-#
 
 FROM alpine:3.10
 
