@@ -1,6 +1,6 @@
 # Dockerfile for building Ansible image for Alpine 3, with as few additional software as possible.
 
-FROM alpine:3.10
+FROM alpine:3.12
 
 RUN echo -e "\nInstalling sudo to emulate normal OS behavior...\n"  && \
     apk --update add sudo                                         && \
